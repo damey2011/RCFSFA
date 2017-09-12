@@ -20,8 +20,11 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^api/campus$', include('campus.api.urls')),
-    url(r'^api/logs$', include('logs.api.urls')),
-    url(r'^api/profile$', include('userprofile.api.urls')),
-    url(r'^api/forums$', include('forums.api.urls')),
+    url(r'^api/campus/', include('campus.api.urls')),
+    url(r'^api/logs/', include('logs.api.urls')),
+    url(r'^api/accounts/', include('accounts.api.urls')),
+    url(r'^api/forums/', include('forums.api.urls'), name='forums'),
+    url(r'^api/programs/', include('programs.api.urls'), name='programs'),
+    url(r'^api/messaging/', include('messaging.api.urls'), name='messaging'),
+    url(r'^api/lib/', include('repertoire.api.urls'), name='repertoire'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

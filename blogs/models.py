@@ -18,6 +18,7 @@ class BlogPost(models.Model):
     author = models.ForeignKey(User)
     likes = models.IntegerField(default=0)
     slug = models.CharField(blank=True, max_length=150)
+    image = models.ImageField(upload_to='post-header-images', blank=True)
     category = models.ForeignKey(to=BlogCategory, null=True)
     timestamp = models.DateTimeField(auto_now_add=True)
 
@@ -37,7 +38,7 @@ class BlogPost(models.Model):
 
 
 class Comment(models.Model):
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog-comment-author+')
     content = models.TextField()
     type = models.IntegerField(default=0)
     parent = models.ForeignKey(BlogPost, on_delete=models.CASCADE)
@@ -49,7 +50,7 @@ class Comment(models.Model):
 
 
 class ChildComment(models.Model):
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog-comment-child-author+')
     content = models.TextField()
     parent = models.ForeignKey(Comment, on_delete=models.CASCADE)
     timestamp = models.DateTimeField(auto_now_add=True)
@@ -60,7 +61,7 @@ class ChildComment(models.Model):
 
 
 class Like(models.Model):
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='like-author+')
     type = models.IntegerField(default=0)  # Post is 0, comment is 1, child comment is 2
     parent = models.IntegerField()
 

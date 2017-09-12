@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# This is being added to every get absolute url
+CURRENT_SERVER_HOST = 'http://127.0.0.1:8000'
 
 # Application definition
 
@@ -38,8 +40,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'userprofile',
-    'forums'
+    'rest_framework.authtoken',
+    'accounts',
+    'forums',
+    'campus',
+    'logs',
+    'blogs',
+    'programs',
+    'repertoire',
+    'messaging',
+    'accommodation'
 ]
 
 MIDDLEWARE = [
@@ -51,6 +61,12 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+}
 
 ROOT_URLCONF = 'rcfsfa.urls'
 
