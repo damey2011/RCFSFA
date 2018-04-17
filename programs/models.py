@@ -36,3 +36,12 @@ class ProgrammeAccomodationBooking(models.Model):
 
     def __str__(self):
         return "%s booked %s" % (self.user.username, self.accommodation.name)
+
+
+class ProgrammeRegisteredAccomodation(models.Model):
+    programme = models.ForeignKey(Programme, on_delete=models.CASCADE)
+    accommodation = models.ForeignKey(Accommodation, on_delete=models.CASCADE)
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return "%s - %s" % (self.programme.title, self.accommodation.name)

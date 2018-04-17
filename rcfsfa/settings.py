@@ -41,20 +41,25 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
+    'rest_framework_swagger',
+    'rest_framework_docs',
+    'corsheaders',
+    'crispy_forms',
     'accounts',
-    'forums',
     'campus',
     'logs',
     'blogs',
     'programs',
     'repertoire',
-    'messaging',
-    'accommodation'
+    'accommodation',
+    'social',
+    'zones'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -69,6 +74,8 @@ REST_FRAMEWORK = {
 }
 
 ROOT_URLCONF = 'rcfsfa.urls'
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 TEMPLATES = [
     {
@@ -88,7 +95,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'rcfsfa.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
@@ -156,3 +162,5 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'

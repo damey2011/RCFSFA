@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+{% block title %}
+    Create New Report
+{% endblock %}
+{% block content %}
+    <style>
+        .mid label{
+            width: 100%;
+        }
+    </style>
+    <section class="global-page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block">
+                        <h3>
+                            MONTHLY GENERAL PROGRESS REPORT SUBMISSION
+                        </h3>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/#page-header-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <br/>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <input type="text" class="form-control" placeholder="State">
+            </div>
+
+            <div class="col-md-4">
+                <input type="text" class="form-control" placeholder="Chapter">
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-8 mid">
+                <form action="" method="post" class="row">
+                    <h4>Monthly Financial Report</h4>
+                    <div class="form-group col-lg-6">
+                        <label>
+                            First Fruits (100%):
+                            <input type="text" class="form-control" name="first-fruit">
+                        </label>
+                    </div>
+
+                    <div class="form-group col-lg-6">
+                        <label>
+                            Total Offering:
+                            <input type="text" class="form-control" name="first-fruit">
+                        </label>
+                    </div>
+
+                    <div class="form-group col-lg-6">
+                        <label>
+                            Tithes:
+                            <input type="text" class="form-control" name="first-fruit">
+                        </label>
+                    </div>
+                </form>
+
+                <form action="" method="post" class="row">
+                    <h4>Specific Programmes</h4>
+                    <div class="form-group col-lg-6">
+                        <label>
+                            Total No of House-Fellowships:
+                            <input type="text" class="form-control" name="first-fruit">
+                        </label>
+                    </div>
+
+                    <div class="form-group col-lg-6">
+                        <label>
+                            How many members do you currently have:
+                            <input type="text" class="form-control" name="first-fruit">
+                        </label>
+                    </div>
+                </form>
+
+
+
+                <form action="" method="post" class="row">
+                    <h4>Evangelistic Outreaches</h4>
+                    <div class="form-group col-lg-6">
+                        <label>
+                            Any Special Indoor Programme:
+                            <input type="text" class="form-control" name="first-fruit">
+                        </label>
+                    </div>
+
+
+                </form>
+
+                <form action="" method="post" class="row">
+                    <h4>General</h4>
+                    <div class="form-group col-lg-6">
+                        <label>
+                            Any Upcoming events/program in the next 1 month:
+                            <input type="text" class="form-control" name="first-fruit">
+                        </label>
+                    </div>
+
+                    <div class="form-group col-lg-6">
+                        <label>
+                            Any area requiring special prayer to God:
+                            <input type="text" class="form-control" name="first-fruit">
+                        </label>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -17,14 +17,36 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
+from rest_framework.schemas import get_schema_view
+from rest_framework_swagger.renderers import OpenAPIRenderer, SwaggerUIRenderer
+
+from rcfsfa import views
+
+schema_view = get_schema_view(title='RCFSFA API', renderer_classes=[OpenAPIRenderer, SwaggerUIRenderer])
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^drf-docs/', include('rest_framework_docs.urls')),
     url(r'^api/campus/', include('campus.api.urls')),
     url(r'^api/logs/', include('logs.api.urls')),
     url(r'^api/accounts/', include('accounts.api.urls')),
-    url(r'^api/forums/', include('forums.api.urls'), name='forums'),
     url(r'^api/programs/', include('programs.api.urls'), name='programs'),
-    url(r'^api/messaging/', include('messaging.api.urls'), name='messaging'),
     url(r'^api/lib/', include('repertoire.api.urls'), name='repertoire'),
+    url(r'^api/accommodation/', include('accommodation.api.urls'), name='accommodation'),
+    url(r'^api/social/', include('social.api.urls'), name='social'),
+
+    #   Normal View URLS
+    url(r'^$', views.HomeView.as_view(), name='home'),
+    url(r'^my-admin/$', views.AdminHomePage.as_view(), name='admin-home'),
+    url(r'^about/$', views.AboutPage.as_view(), name='about'),
+    url(r'^contact/$', views.ContactPage.as_view(), name='contact'),
+    url(r'^gallery/$', views.GalleryPage.as_view(), name='gallery'),
+
+    #   Django Apps URLS
+    url(r'^accommodation/', include('accommodation.urls')),
+    url(r'^blogs/', include('blogs.urls')),
+    url(r'^repertoire/', include('repertoire.urls')),
+    url(r'^reports/', include('report.urls')),
+    url(r'^programmes/', include('programs.urls')),
+    url(r'^accounts/', include('accounts.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

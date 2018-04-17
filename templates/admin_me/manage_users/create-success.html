@@ -1,0 +1,10 @@
+{% extends 'admin_me/admin-base.html' %}
+{% block title %}
+    Create Success
+{% endblock %}
+
+{% block content %}
+    <div class="alert alert-success">
+        <strong>Success:</strong> User was created successfully. Go to <a href="{% url 'list-users' %}">users</a>.
+    </div>
+{% endblock %}

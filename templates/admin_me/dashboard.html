@@ -1,0 +1,100 @@
+{% extends 'admin_me/admin-base.html' %}
+
+{% block dash_active %}
+    active
+{% endblock %}
+
+{% block content %}
+
+    <div class="col-md-4">
+        <a href="{% url 'list-users' %}" class="my-card">
+            <div class="my-card-top">
+                <i class="pe-7s-users"></i>
+            </div>
+            <div class="my-card-header">
+                Manage Users
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="#" class="my-card">
+            <div class="my-card-top">
+                <i class="pe-7s-key"></i>
+            </div>
+            <div class="my-card-header">
+                Manage Users Permissions
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="{% url 'list-programs' %}" class="my-card">
+            <div class="my-card-top">
+                <i class="pe-7s-display1"></i>
+            </div>
+            <div class="my-card-header">
+                Manage Programs
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="#" class="my-card">
+            <div class="my-card-top">
+                <i class="pe-7s-home"></i>
+            </div>
+            <div class="my-card-header">
+                Manage Accommodations
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="#" class="my-card">
+            <div class="my-card-top">
+                <i class="pe-7s-bookmarks"></i>
+            </div>
+            <div class="my-card-header">
+                Manage Repertoire
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="#" class="my-card">
+            <div class="my-card-top">
+                <i class="pe-7s-global"></i>
+            </div>
+            <div class="my-card-header">
+                Manage Zones
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="#" class="my-card">
+            <div class="my-card-top">
+                <i class="pe-7s-global"></i>
+            </div>
+            <div class="my-card-header">
+                Manage Areas
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="#" class="my-card">
+            <div class="my-card-top">
+                <i class="pe-7s-settings"></i>
+            </div>
+            <div class="my-card-header">
+                Settings
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="#" class="my-card">
+            <div class="my-card-top">
+                <i class="pe-7s-pin"></i>
+            </div>
+            <div class="my-card-header">
+                Todo
+            </div>
+        </a>
+    </div>
+
+{% endblock %}

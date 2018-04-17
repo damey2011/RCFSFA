@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!--
+ ==================================================
+     Global Page Section Start
+ ================================================== -->
+    <section class="global-page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block">
+                        <h2>Contact Us</h2>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/#page-header-->
+
+
+    <!--
+    ==================================================
+        Contact Section Start
+    ================================================== -->
+    <section id="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="block">
+                        <h2 >Contact US</h2>
+                        <p class="subtitle-des " data-wow-duration="500ms" data-wow-delay=".5s">
+                            Send Your Messages and we Will get back to You!
+                        </p>
+                        <div class="contact-form">
+                            <form id="contact-form" method="post" action="sendmail.php" role="form">
+
+                                <div class="form-group " data-wow-duration="500ms" data-wow-delay=".6s">
+                                    <input type="text" placeholder="Your Name" class="form-control" name="name" id="name">
+                                </div>
+
+                                <div class="form-group " data-wow-duration="500ms" data-wow-delay=".8s">
+                                    <input type="email" placeholder="Your Email" class="form-control" name="email" id="email" >
+                                </div>
+
+                                <div class="form-group" data-wow-duration="500ms" data-wow-delay="1s">
+                                    <input type="text" placeholder="Subject" class="form-control" name="subject" id="subject">
+                                </div>
+
+                                <div class="form-group" data-wow-duration="500ms" data-wow-delay="1.2s">
+                                    <textarea rows="6" placeholder="Message" class="form-control" name="message" id="message"></textarea>
+                                </div>
+
+
+                                <div id="submit" class= data-wow-duration="500ms" data-wow-delay="1.4s">
+                                    <input type="submit" id="contact-submit" class="btn btn-default btn-send" value="Send Message">
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="map-area">
+                        <h2 class="subtitle  " data-wow-duration="500ms" data-wow-delay=".3s">Find Us</h2>
+                        <p class="subtitle-des " data-wow-duration="500ms" data-wow-delay=".5s">
+                            Locate Us on Google Map
+                        </p>
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31693.337555161048!2d3.4193495651625696!3d6.810274884971183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x516e784fdf3f3751!2sThe+Redeemed+Christian+Church+Of+God+National+Camp+Arena!5e0!3m2!1sen!2sng!4v1503926461509" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row address-details">
+                <div class="col-md-3">
+                    <div class="address " data-wow-duration="500ms" data-wow-delay=".3s">
+                        <i class="ion-ios-location-outline"></i>
+                        <P>NATIONAL SECRETARIAT</p>
+                        <h5>KM 46/85 ,Lagos-Ibadan Expressway <br>Mowe, Ogun State.</h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="address" data-wow-duration="500ms" data-wow-delay=".5s">
+                        <i class="ion-ios-email-outline"></i>
+                        <P>EMAIL</p>
+                        <h5>support@rcfsfa.com<br>rcfsfa@yahoo.com</h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="email " data-wow-duration="500ms" data-wow-delay=".7s">
+                        <i class="ion-ios-telephone-outline"></i>
+                        <P>WHATSAPP:RCFSFA FORUM</p>
+                        <p>+2348037063144<br>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="email " data-wow-duration="500ms" data-wow-delay=".9s">
+                        <i class="ion-cash"></i>
+
+                        <p>ZENITH BANK PLC</p>
+                        <P>Acct NAME:RCFSFA<br>ACCT NO:1012527093</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!--
+    ==================================================
+        Call To Action Section Start
+    ================================================== -->
+    <section id="call-to-action">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block">
+                        <h2 class="title" data-wow-delay=".3s" data-wow-duration="500ms">NEWS LETTER</h1>
+                            <p class=data-wow-delay=".5s" data-wow-duration="500ms">SUBSCRIBE TO OUR NEWSLETTER ...</br> By signing up for RCFSFA email notification, you agree to our Terms of Use and Privacy Policy, and to receive latest news and updates as Touching RCFSFA </p>
+                            <a href="contact.html" class="btn btn-default btn-contact wow " data-wow-delay=".7s" data-wow-duration="500ms">Sign Up</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'admin_me/admin-base.html' %}
+{% block title %}
+    Create a new User
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2>Create User Account</h2>
+        <hr>
+        <form action="" method="post" class="form-group">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-default">Create</button>
+        </form>
+    </div>
+{% endblock %}
